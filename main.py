@@ -9,7 +9,8 @@ def main():
     clock = pygame.time.Clock()
     dt = 0
     
-    Player.draw(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
+    player = Player(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
+    #Player.draw(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
 
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
@@ -20,7 +21,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         pygame.Surface.fill(screen, "black") #fill screen with black color
-        Player.draw(screen)
+        player.draw(screen)
         pygame.display.flip() #refresh screen
         dt = clock.tick(60)/1000
 
