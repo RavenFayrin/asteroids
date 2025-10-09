@@ -22,6 +22,7 @@ def main():
                 return
         pygame.Surface.fill(screen, "black") #fill screen with black color
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip() #refresh screen
         dt = clock.tick(60)/1000
 
